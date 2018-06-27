@@ -385,3 +385,87 @@ Hive supports universal metadata management, the metadata (table definition, sto
 
 ## Setup HIVE test environment
 
+Download Hive installation package
+
+```shell
+wget https://archive.cloudera.com/cdh5/cdh/5/hive-1.1.0-cdh5.7.0.tar.gz
+```
+
+
+
+
+
+# Build Spark from Source Code
+
+
+
+Download Spark source code
+
+```shell
+eric@eric-asus:~/spark_build$ wget https://archive.apache.org/dist/spark/spark-2.1.0/spark-2.1.0.tgz
+```
+
+
+
+Spark build url 
+
+
+
+```xml
+    <profile>
+      <id>hadoop-2.6</id>
+      <properties>
+        <hadoop.version>2.6.4</hadoop.version>
+        <jets3t.version>0.9.3</jets3t.version>
+        <zookeeper.version>3.4.6</zookeeper.version>
+        <curator.version>2.6.0</curator.version>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>hive-thriftserver</id>
+      <modules>
+        <module>sql/hive-thriftserver</module>
+      </modules>
+    </profile>
+
+    <profile>
+      <id>yarn</id>
+      <modules>
+        <module>yarn</module>
+        <module>common/network-yarn</module>
+      </modules>
+    </profile>
+
+    <repository>
+      <id>cloudera</id>
+      <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+    </repository>
+
+
+```
+
+
+
+
+
+Build command
+
+```shell
+./build/mvn -Pyarn \
+	-Phadoop-2.6 \
+	-Pyarn \
+	-Phive \
+	-Phive-thriftserver \
+	-Dhadoop.version=2.6.0-cdh5.7.0 \
+	-DskipTests \
+	-U \
+	clean package
+```
+
+**-D** change the property values specified in the pom.xml
+
+**-P** specify the profile for which to make the build
+
+
+
