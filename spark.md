@@ -210,7 +210,7 @@ etc/hadoop/yarn-site.xml:
 
 2. Start ResourceManager daemon and NodeManager daemon:
 
-   ```shell
+```shell
    [hadoop@hadoop001 hadoop-2.6.0-cdh5.7.0]$ ./sbin/start-yarn.sh 
    starting yarn daemons
    starting resourcemanager, logging to /home/hadoop/install/hadoop-2.6.0-cdh5.7.0/logs/yarn-hadoop-resourcemanager-hadoop001.out
