@@ -223,7 +223,7 @@ etc/hadoop/yarn-site.xml:
    5036 NodeManager
    5341 Jps
    4191 NameNode
-   ```
+```
 
    3. Browse the web interface for the ResourceManager, by default it is at
 
@@ -331,4 +331,47 @@ COMMIT
 		Bytes Written=487290
 
 ```
+
+
+
+# Hive
+
+Query engines supported by Hive
+
+- MapReduce - Hive on MapReduce
+- Spark - Hive on Spark
+- Tez - Hive on Tez
+
+Hive also support compressed file. The compression formats supported by Hive
+
+- GZIP
+- LZO
+- SNAPPY
+- BZIP2
+
+The storage formats supported by Hive
+
+- TextFile
+- SequenceFile
+- RCFile
+- ORC
+- Parquet
+
+UDF - User defined functions
+
+Hive supports universal metadata management, the metadata (table definition, storage) can be shared with other platforms or frameworks.
+
+- Presto
+- Impala (A memory based solution, similar to Hive) 
+- SparkSQL
+
+
+
+**Optimized Row Columnar (*ORC*)** a high performance column based storage. ORC increases significantly the search performance.
+
+
+
+### Hive Architecture
+
+![](./images/2018-06-27 00-33-46.png)
 
