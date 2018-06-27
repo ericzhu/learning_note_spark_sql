@@ -375,3 +375,13 @@ Hive supports universal metadata management, the metadata (table definition, sto
 
 ![](https://github.com/ericzhu/learning_note_spark_sql/blob/master/images/2018-06-27%2000-36-13.png)
 
+![](/home/eric/Desktop/spark_note/images/2018-06-27 00-34-46.png)
+
+
+
+![](/home/eric/Desktop/spark_note/images/2018-06-27 00-31-41.png)
+
+
+
+## Setup HIVE test environment
+
